@@ -1,0 +1,12 @@
+<!-- Task 1 -->
+
+<input type="text" id="sentence" onkeypress="result()"/>
+<h1 id="head"></h1>
+
+<script>
+  var sentence = document.getElementById("sentence");
+  var head = document.getElementById("head");
+  function result() {
+    head.textContent = sentence.value;
+  }
+</script>
