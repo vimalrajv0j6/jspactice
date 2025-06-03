@@ -1,16 +1,22 @@
-<!-- change the paragraph -->
-<p id="one">
-    helloooo
-</p>
 
-
-<!-- change the heading -->
-
-<h1 id="head">Hello world!</h1>
+<!-- add two numbers -->
+<input type="number" id="num1">
+<input type="number" id="num2">
+<button id="res" onclick="addd()">Add</button> 
+<p id="resss">Result</p>
 
 <script>
-    var para=document.getElementById("one");
-    para.textContent="byee";
-    var head=document.getElementById("head");
-    head.textContent="Bye World!..";
+    var num1=document.getElementById("num1");
+    var num2=document.getElementById("num2");
+    var result=document.getElementById("resss");
+
+    function addd(){
+            var num1value= Number(num1.value);
+            var num2value=Number(num2.value);
+            var total=num1value+num2value;
+            resss.textContent = "Result :"+total;
+    }
+
+
 </script>
+
