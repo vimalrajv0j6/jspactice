@@ -1,0 +1,36 @@
+<!-- Guess the number Game -->
+
+
+<h1>Guess the number</h1>
+
+<input type="text" id="number">
+<button onclick="check()">check</button>
+<p id="para">You are wrong / right</p>
+<p id="score">Your score : 10</p>
+
+
+<script>
+    var number = document.getElementById("number");
+    var para = document.getElementById("para");
+    var score= document.getElementById("score");
+    var src = 10;
+
+    function check(){
+        var randomnumber = Math.floor(Math.random()*10)+1;
+        var guessnumber = Number(number.value);
+        if(randomnumber == guessnumber){
+            para.textContent = "You are right";
+            alert("TOU WON!.... YOUR SCORE IS "+src);
+        }
+        else{
+            para.textContent = "You are wrong ,the random number is "+randomnumber;
+            src = src-1;
+            score.textContent = "Your score :"+src;
+            if(src==0){
+                alert("YOU LOSE........")
+            }
+        }
+    
+    }
+
+</script>
