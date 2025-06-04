@@ -1,3 +1,6 @@
 var movie = ["vikram" , "leo" , "kaithi" , "thuppakki"]
 
-console.log(movie)
+for(count=0; count<movie.length; count++)
+{
+    console.log(movie[count]);
+}
