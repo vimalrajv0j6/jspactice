@@ -2,6 +2,7 @@ var inputList = document.querySelector(".addtask");
 var input = document.getElementById("input");
 var addBtn = document.getElementById("btn");
 
+
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
 todos.forEach((task) => createTodo(task));
