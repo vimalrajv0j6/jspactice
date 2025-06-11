@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J Quary</title>
+    <script src="../jquary/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <div id="div">content</div>
+    <div class="div">content 1</div>
+    <div class="div">content2</div>
+    <div class="div">content3</div>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <form action="">
+      <input type="text" placeholder="enter text" />
+      <input type="password" placeholder="enter password" />
+      <input type="text" name="username"/>
+      <input type="text" name="email"/>
+    </form>
+     <a href="https://example.com">Example</a>
+     <a href="https://example.org">Example org</a>
+     <a href="https://google.com">google org</a>
+     <div class="container">
+        <p>paragraph1</p>
+        <p>paragraph2</p>
+     </div>
+ 
+    <div class="parent">
+        <p>Direct child</p>
+        <div>
+            <p>not a direct child</p>
+        </div>
+    </div>
+
+
+
+    <script>
+      $(document).ready(function () {
+        $("h1").text("hiii");
+      });
+      // ID selector
+      $("#div").text("this is a content");
+
+      // Class selector
+      $(".div").css("color", "blue");
+
+      // Element selector
+    //   $("p").hide();
+
+      // Atribute selector
+      $("[placeholder]").css("border", "2px solid red");
+
+    //   value selector
+
+    $('[name = "username"]').val('helloo');
+
+    // partial value selector
+    $('a[href*="example"]').css('color','black');
+    $('a[href^="https://google"]').css('color','black');
+
+    //  Descendant selactor
+    $('.container p').css('display','block');
+ 
+    // child selector
+    $('.parent >p').css('font-weight','bold');
+
+    </script>
+  </body>
+</html>

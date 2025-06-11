@@ -1,0 +1,19 @@
+.highlight{
+    background-color: lightyellow;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.removeButton{
+    color: red;
+    cursor: pointer;
+}
+
+.editButton{
+    color: blue;
+    margin-left: 10px;
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <script src="../jquary/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="content">OLD content</div>
+    <img src="logo.png" alt="LOGO" id="logo">    
+    <input type="text" id="input" value="hiiii">
+    <div class="parent">
+        <p>text 1</p>
+    </div>
+    <div id="remove">this will be remove</div>
+
+
+
+
+    <script>
+
+        $('.content').html('<p>NEW Content</p>');
+
+        // text()
+
+        $('.content').text('NEW Text content');
+
+        // attr()
+
+        $('#logo').attr('src','new-logo.png');
+        $('#logo').attr('alt','NEW-Logo')
+
+        // val()
+
+        $('#input').val('helloooo');
+
+        // append()
+        $('.parent').append('<p>text 2</p>');
+
+        // prepend()
+        $('.parent').prepend('<p>text 3</p>');
+        // remove()
+        $('#remove').remove();   
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
