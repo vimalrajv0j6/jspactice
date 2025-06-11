@@ -104,9 +104,6 @@ section {
     padding-top: 48px;
 }
 
-/* Depending on the view example (1, 2, or 3), 
-you will want to set display:none for the other two 
-and display:flex for the example you want to see. */
 .view1 {
     display: -webkit-box;
     display: -ms-flexbox;
