@@ -1,0 +1,72 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+h2 {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+#inputForm {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#inputForm input {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+#inputForm input:focus {
+  outline: none;
+}
+#inputForm button {
+  margin: 10px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+table {
+  margin-top: 40px;
+  border-collapse: collapse;
+  width: 100%;
+}
+th,td {
+  border: 1px solid #000000;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f5f5f5;
+}
+
+
+.delBtn{
+   margin: 10px;
+   padding: 0px 10px;
+   cursor: pointer;
+}
+
+.editBtn{
+   margin: 10px;
+   padding: 0px 10px;
+   cursor: pointer;
+}
+.updateBtn{
+   margin: 10px;
+   padding: 0px 10px;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 743px) {
+  #inputForm {
+    flex-direction: column;
+    align-items: center;
+  }
+  #inputForm input,
+  #inputForm button {
+    width: 80%;
+  }
+}
