@@ -13,6 +13,7 @@ decrement.addEventListener('click',()=>{
    count.textContent=countNumber;
 })
 reset.addEventListener('click',()=>{
-   countNumber=0;
+   countNumber=0
+   ;
    count.textContent=countNumber;
 })

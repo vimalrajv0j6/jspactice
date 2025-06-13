@@ -1,0 +1,26 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(255, 254, 240);
+}
+
+h2{
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#clock {
+  font-family: "Courier New", monospace;
+  font-size: 3rem;
+  color: #4caf50;
+  text-align: center;
+  padding: 20px;
+}
