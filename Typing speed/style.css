@@ -1,0 +1,28 @@
+ body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f1f1f1;
+    }
+    h2 {
+      text-align: center;
+    }
+    #testArea {
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    #sampleText {
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
+    #inputText {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
