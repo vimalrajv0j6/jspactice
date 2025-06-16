@@ -1,31 +1,39 @@
-const apiKey = "YOUR_API_KEY"; // Replace with your OpenWeatherMap API key
-const weatherBtn = document.getElementById("getWeatherBtn");
+var cityInput = document.getElementById('cityInput');
+  var getWeatherBtn = document.getElementById("getWeatherBtn");
 
-weatherBtn.addEventListener("click", () => {
-  const city = document.getElementById("cityInput").value.trim();
-  if (!city) {
-    alert("Please enter a city name.");
-    return;
-  }
+  getWeatherBtn.addEventListener("click", function () {
+    const city = cityInput.value.trim();
+    if (!city) {
+      alert("Please enter a city name.");
+      return;
+    }
 
-  const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    // Step 1: Convert city name to coordinates
+    fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${city}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.length > 0) {
+          const lat = data[0].lat;
+          const lon = data[0].lon;
+          console.log(`Latitude: ${lat}, Longitude: ${lon}`);
 
-  fetch(apiURL)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("City not found");
-      }
-      return response.json();
-    })
-    .then(data => {
-      document.getElementById("weatherResult").classList.remove("hidden");
-      document.getElementById("cityName").textContent = `Weather in ${data.name}, ${data.sys.country}`;
-      document.getElementById("temp").textContent = `🌡️ Temp: ${data.main.temp} °C`;
-      document.getElementById("desc").textContent = `🌤️ Condition: ${data.weather[0].description}`;
-      document.getElementById("humidity").textContent = `💧 Humidity: ${data.main.humidity}%`;
-    })
-    .catch(error => {
-      alert("Error: " + error.message);
-      document.getElementById("weatherResult").classList.add("hidden");
-    });
-});
+          // Step 2: Get weather using coordinates
+          fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`
+          )
+            .then((res) => res.json())
+            .then((weatherData) => {
+              const weather = weatherData.current_weather;
+              console.log("Weather:", weather);
+            })
+            .catch((error) => {
+              console.log("Weather API Error:", error);
+            });
+        } else {
+          alert("City not found.");
+        }
+      })
+      .catch((err) => {
+        console.log("Error fetching coordinates:", err);
+      });
+  });
