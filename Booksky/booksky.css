@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+  background-color: #f91c0c;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.container {
+  background-color: black;
+  color: white;
+  width: 30%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.container h2 {
+  color: #f91c0c;
+}
+
+.container button {
+  background-color: #f91c0c;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.container button:hover {
+  cursor: pointer;
+}
+
+.addbutton {
+  background-color: #f91c0c;
+  color: black;
+  border-radius: 100%;
+  padding: 30px;
+  font-size: 30px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+}
+
+.addbutton:hover {
+  cursor: pointer;
+}
+
+.popup-overlay {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: 1;
+  display: none;
+}
+
+.popupmsg {
+  background-color: #f91c0c;
+  width: 40%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  top: 20%;
+  left: 30%;
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+.popupmsg input {
+  background-color: transparent;
+  border: none;
+  width: 90%;
+  font-size: 20px;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+.popupmsg textarea {
+  display: block;
+  background-color: transparent;
+  width: 90%;
+  height: 50px;
+  font-size: 20px;
+  border: 2px solid black;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.popupmsg input::placeholder {
+  color: black;
+}
+.popupmsg textarea::placeholder {
+  color: black;
+}
+.popupmsg input:focus {
+  outline: none;
+}
+.popupmsg textarea:focus {
+  outline: none;
+}
+
+.popupmsg button {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.popupmsg button:hover {
+  cursor: pointer;
+}
