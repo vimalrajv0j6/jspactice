@@ -1,5 +1,7 @@
 <!-- Guess the number Game -->
-
+<link rel="stylesheet" href="number.css">
+<body>
+    
 
 <h1>Guess the number</h1>
 
@@ -7,7 +9,7 @@
 <button onclick="check()">check</button>
 <p id="para">You are wrong / right</p>
 <p id="score">Your score : 10 point</p>
-
+</body>
 
 <script>
     var number = document.getElementById("number");
@@ -16,6 +18,10 @@
     var src = 10;
 
     function check(){
+        if(number.value === ""){
+          return alert("Enter the Number!...");
+          
+        }
         var randomnumber = Math.floor(Math.random()*10)+1;
         var guessnumber = Number(number.value);
         if(randomnumber == guessnumber){
