@@ -19,6 +19,8 @@ getWeatherBtn.addEventListener("click", function () {
       if (data.length > 0) {
         const lat = data[0].lat;
         const lon = data[0].lon;
+        console.log(data);
+        
 
         fetch(
           `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`
@@ -33,6 +35,7 @@ getWeatherBtn.addEventListener("click", function () {
             temp.innerHTML = `🌡️ Temperature: ${report.temperature} °C`;
             windSpeed.innerHTML = `💨 Wind Speed: ${report.windspeed} km/h`;
             windDirection.innerHTML = `🧭 Wind Direction: ${dir} (${report.winddirection}°)`;
+            console.log(weatherData);
             
             // Show weather result
             weatherResult.classList.remove("hidden");
