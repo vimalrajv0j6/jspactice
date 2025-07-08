@@ -6,6 +6,8 @@ fetch('https://api.exchangerate-api.com/v4/latest/USD')
   .then(res => res.json())
   .then(data => {
     const rates = data.rates;
+    console.log(data);
+    
     displayDropDown(rates); 
   })
   .catch(err => console.error('Fetch error:', err));
